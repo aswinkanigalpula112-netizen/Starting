@@ -25,7 +25,7 @@
           <p class="tagline">Follow a thought. Find the image that stays with you.</p>
         </div>
 
-        <div class="search-panel">
+        <form id="search-form" class="search-panel">
           <div class="panel-heading">
             <span class="panel-index">01 / LOOK FOR</span>
             <span class="panel-caption">Start anywhere</span>
@@ -33,7 +33,7 @@
           <div class="search-row">
             <label class="sr-only" for="search-input">Search for images</label>
             <input id="search-input" name="q" type="search" placeholder="Try ‘morning light’" autocomplete="off">
-            <button id="search-button" type="button"><span>Search</span><span aria-hidden="true">↗</span></button>
+            <button id="search-button" type="submit"><span>Search</span><span aria-hidden="true">↗</span></button>
           </div>
           <div class="suggestions" aria-label="Suggested searches">
             <span class="suggestion-label">A few starting points</span>
@@ -47,7 +47,7 @@
             <span>Press search when you’re ready</span>
             <button id="clear-button" class="clear-button" type="button">Clear <span aria-hidden="true">×</span></button>
           </div>
-        </div>
+        </form>
       </section>
 
       <section class="results-section" aria-labelledby="results-title">

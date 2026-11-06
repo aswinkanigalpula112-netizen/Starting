@@ -82,7 +82,13 @@ h2 span { color: var(--orange); }
 .result-count { margin: 0 0 4px; color: var(--muted); font-family: var(--mono); font-size: 10px; }
 .result-count span { padding: 0 4px; color: var(--orange); }
 .results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+.result-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); background: var(--white); }
+.result-card-link { display: block; overflow: hidden; background: #e8e5dc; }
+.result-image { display: block; width: 100%; height: 240px; object-fit: cover; transition: transform .35s ease; }
+.result-card-link:hover .result-image { transform: scale(1.035); }
+.result-caption { margin: 0; padding: 12px 14px 14px; color: var(--ink); font-family: var(--serif); font-size: 14px; line-height: 1.45; }
 .empty-state { display: flex; min-height: 224px; flex-direction: column; align-items: center; justify-content: center; margin-top: 18px; border: 1px dashed #cfcec2; background: rgb(251 250 246 / 38%); text-align: center; }
+.empty-state[hidden] { display: none; }
 .empty-symbol { color: var(--orange); font-size: 21px; }
 .empty-title { margin: 12px 0 6px; font-family: var(--serif); font-size: 19px; }
 .empty-copy { margin: 0; color: var(--muted); font-size: 12px; }
