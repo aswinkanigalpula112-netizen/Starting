@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <title>TypeTasks | Little steps, clearly tracked</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="page-header">
+        <p class="eyebrow">A calm place to get things done</p>
+        <h1>TypeTasks<span>.</span></h1>
+        <p class="subtitle">Add a task, take the next step, and keep moving.</p>
+      </header>
+
+      <form id="task-form" class="addrow">
+        <label class="visually-hidden" for="title">Task title</label>
+        <input id="title" type="text" placeholder="What needs doing?" required />
+        <label class="visually-hidden" for="status">Starting status</label>
+        <select id="status" aria-label="Starting status">
+          <option value="todo">To do</option>
+          <option value="in-progress">In progress</option>
+          <option value="done">Done</option>
+        </select>
+        <button id="add" type="submit">Add task <span aria-hidden="true">+</span></button>
+      </form>
+
+      <section aria-label="Task list">
+        <div id="chips" class="filters" aria-label="Filter tasks">
+          <button class="filter active" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="todo" type="button">To do</button>
+          <button class="filter" data-filter="in-progress" type="button">In progress</button>
+          <button class="filter" data-filter="done" type="button">Done</button>
+        </div>
+        <ul id="list" class="task-list" aria-live="polite"></ul>
+      </section>
+
+      <footer>Small steps count.</footer>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
